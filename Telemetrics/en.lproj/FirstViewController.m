@@ -8,13 +8,17 @@
 
 #import "FirstViewController.h"
 #import "PlacemarkViewController.h"
+#import "Journey.h"
 
 @interface FirstViewController ()
+
 
 @property (nonatomic, weak) IBOutlet MKMapView *mapView;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *getAddressButton;
 @property (nonatomic, strong) CLGeocoder *geocoder;
 @property (nonatomic, strong) MKPlacemark *placemark;
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) CLLocationManager *locationManager;
 
 @end
 
@@ -27,6 +31,15 @@
     self.mapView.showsUserLocation = YES;
     
     self.geocoder = [[CLGeocoder alloc] init];
+    self.locationManager = [[CLLocationManager alloc] init];
+    
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+    
+    // Set a movement threshold for new events.
+    self.locationManager.distanceFilter = 500;
+    
+    [self.locationManager startUpdatingLocation];
+    //addEvent();
     
     // create a custom navigation bar button and set it to always say "Back"
 	UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc] init];
@@ -53,6 +66,24 @@
     }];
 }
 
+- (void)addEvent {
+    
+    CLLocation *location = [self.locationManager location];
+    if (!location) {
+        return;
+    }
+    // Create and configure a new instance of the Event entity.
+    Journey *journey = (Journey *)[NSEntityDescription insertNewObjectForEntityForName:@"Journey" inManagedObjectContext:managedObjectContext];
+    
+    CLLocationCoordinate2D coordinate = [location coordinate];
+    [journey setLatitude:[NSNumber numberWithDouble:coordinate.latitude]];
+    [journey setLongitude:[NSNumber numberWithDouble:coordinate.longitude]];
+    [journey setDate:[NSDate date]];
+    NSError *error = nil;
+    if (![managedObjectContext save:&error]) {
+        // Handle the error.
+    }
+}
 
 - (void)didReceiveMemoryWarning
 {

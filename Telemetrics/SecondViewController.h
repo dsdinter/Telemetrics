@@ -9,6 +9,25 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface SecondViewController : UIViewController
+@class GraphView;
+@class AccelerometerFilter;
 
+@interface SecondViewController : UIViewController<UIAccelerometerDelegate>
+{
+	GraphView *unfiltered;
+	GraphView *filtered;
+	UIBarButtonItem *pause;
+	UILabel *filterLabel;
+	AccelerometerFilter *filter;
+	BOOL isPaused, useAdaptive;
+}
+
+@property(nonatomic, retain) IBOutlet GraphView *unfiltered;
+@property(nonatomic, retain) IBOutlet GraphView *filtered;
+@property(nonatomic, retain) IBOutlet UIBarButtonItem *pause;
+@property(nonatomic, retain) IBOutlet UILabel *filterLabel;
+
+-(IBAction)pauseOrResume:(id)sender;
+-(IBAction)filterSelect:(id)sender;
+-(IBAction)adaptiveSelect:(id)sender;
 @end
