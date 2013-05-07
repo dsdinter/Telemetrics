@@ -363,7 +363,7 @@
                         </constraints>
                         <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Acceleration" image="second" id="6"/>
+                    <tabBarItem key="tabBarItem" title="Acceleration" image="graph_bar_trend@2x.png" id="6"/>
                     <connections>
                         <outlet property="filtered" destination="jvh-b4-o4E" id="7jm-3r-oNY"/>
                         <outlet property="pause" destination="pEq-jk-jpf" id="c3R-Q2-QZj"/>
@@ -415,7 +415,7 @@
     </scenes>
     <resources>
         <image name="globe@2x.png" width="52" height="52"/>
-        <image name="second" width="16" height="16"/>
+        <image name="graph_bar_trend@2x.png" width="52" height="52"/>
     </resources>
     <classes>
         <class className="FirstViewController" superclassName="UIViewController">
