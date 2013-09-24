@@ -1,5 +1,5 @@
 /*
-     File: PlacemarkViewController.h
+     File: PlacemarkViewController.m
  Abstract: Displays the address data in the placemark acquired from the reverse geocoder.
   Version: 1.3
  
@@ -45,11 +45,43 @@
  
  */
 
-#import <UIKit/UIKit.h>
-#import <MapKit/MapKit.h>
+#import "JourneyViewController.h"
 
-@interface PlacemarkViewController : UITableViewController
+@implementation JourneyViewController
 
-@property (nonatomic, strong) MKPlacemark *placemark;
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    cell.detailTextLabel.text = self.placemark.thoroughfare;
+    
+    cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
+    cell.detailTextLabel.text = self.placemark.subThoroughfare;
+
+    cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0]];
+    cell.detailTextLabel.text = self.placemark.locality;
+
+    cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0]];
+    cell.detailTextLabel.text = self.placemark.subLocality;
+
+    cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:4 inSection:0]];
+    cell.detailTextLabel.text = self.placemark.administrativeArea;
+
+    cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:5 inSection:0]];
+    cell.detailTextLabel.text = self.placemark.subAdministrativeArea;
+
+    cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:6 inSection:0]];
+    cell.detailTextLabel.text = self.placemark.postalCode;
+
+    cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:7 inSection:0]];
+    cell.detailTextLabel.text = self.placemark.country;
+
+    cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:8 inSection:0]];
+    cell.detailTextLabel.text = self.placemark.ISOcountryCode;
+    
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationNone];
+}
 
 @end
+

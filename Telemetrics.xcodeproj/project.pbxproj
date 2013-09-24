@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B56D419D1727328700521BB2 /* PlacemarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B56D419C1727328700521BB2 /* PlacemarkViewController.m */; };
+		B53FAD8F173EE7F200CE3C3D /* Journey.m in Sources */ = {isa = PBXBuildFile; fileRef = B53FAD8E173EE7F200CE3C3D /* Journey.m */; };
+		B56D419D1727328700521BB2 /* JourneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B56D419C1727328700521BB2 /* JourneyViewController.m */; };
 		B56D419F17273BC600521BB2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B56D419E17273BC600521BB2 /* CoreLocation.framework */; };
 		B56D41A117273BD200521BB2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B56D41A017273BD200521BB2 /* MapKit.framework */; };
 		B56D41A2172740DF00521BB2 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B56D41A4172740DF00521BB2 /* FirstViewController.m */; };
 		B59C14EF173857C800E2860A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59C14EE173857C800E2860A /* CoreData.framework */; };
 		B59C14F217385EB300E2860A /* Telemetrics.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B59C14F017385EB300E2860A /* Telemetrics.xcdatamodeld */; };
-		B59C14F51738600B00E2860A /* Journey.m in Sources */ = {isa = PBXBuildFile; fileRef = B59C14F41738600B00E2860A /* Journey.m */; };
 		B59C14F71739B08000E2860A /* globe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B59C14F61739B08000E2860A /* globe@2x.png */; };
 		B59C14F91739B12100E2860A /* graph_bar_trend@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B59C14F81739B12100E2860A /* graph_bar_trend@2x.png */; };
 		B5CF85A21727242100BED8D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CF85A11727242100BED8D6 /* UIKit.framework */; };
@@ -52,15 +52,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B56D419B1727328700521BB2 /* PlacemarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlacemarkViewController.h; path = ../PlacemarkViewController.h; sourceTree = "<group>"; };
-		B56D419C1727328700521BB2 /* PlacemarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlacemarkViewController.m; path = ../PlacemarkViewController.m; sourceTree = "<group>"; };
+		B53FAD8D173EE7F200CE3C3D /* Journey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Journey.h; sourceTree = "<group>"; };
+		B53FAD8E173EE7F200CE3C3D /* Journey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Journey.m; sourceTree = "<group>"; };
+		B56D419B1727328700521BB2 /* JourneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JourneyViewController.h; path = ../JourneyViewController.h; sourceTree = "<group>"; };
+		B56D419C1727328700521BB2 /* JourneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JourneyViewController.m; path = ../JourneyViewController.m; sourceTree = "<group>"; };
 		B56D419E17273BC600521BB2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B56D41A017273BD200521BB2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B56D41A3172740DF00521BB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = en; path = en.lproj/FirstViewController.m; sourceTree = "<group>"; };
 		B59C14EE173857C800E2860A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B59C14F117385EB300E2860A /* Telemetrics.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Telemetrics.xcdatamodel; sourceTree = "<group>"; };
-		B59C14F31738600B00E2860A /* Journey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Journey.h; sourceTree = "<group>"; };
-		B59C14F41738600B00E2860A /* Journey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Journey.m; sourceTree = "<group>"; };
 		B59C14F61739B08000E2860A /* globe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "globe@2x.png"; path = "../../../../Downloads/app-bits_free_tabbar_icons/retina/globe@2x.png"; sourceTree = "<group>"; };
 		B59C14F81739B12100E2860A /* graph_bar_trend@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "graph_bar_trend@2x.png"; path = "../../../../Downloads/app-bits_free_tabbar_icons/retina/graph_bar_trend@2x.png"; sourceTree = "<group>"; };
 		B5CF859E1727242100BED8D6 /* Telemetrics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Telemetrics.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,8 +168,8 @@
 				B5ECF2AE17275B4D00BAF566 /* GraphView.m */,
 				B5CF85B01727242100BED8D6 /* AppDelegate.h */,
 				B5CF85B11727242100BED8D6 /* AppDelegate.m */,
-				B56D419B1727328700521BB2 /* PlacemarkViewController.h */,
-				B56D419C1727328700521BB2 /* PlacemarkViewController.m */,
+				B56D419B1727328700521BB2 /* JourneyViewController.h */,
+				B56D419C1727328700521BB2 /* JourneyViewController.m */,
 				B5CF85B91727242100BED8D6 /* MainStoryboard_iPhone.storyboard */,
 				B5CF85BF1727242100BED8D6 /* FirstViewController.h */,
 				B56D41A4172740DF00521BB2 /* FirstViewController.m */,
@@ -178,6 +178,9 @@
 				B5CF85C61727242100BED8D6 /* SecondViewController.h */,
 				B5CF85C71727242100BED8D6 /* SecondViewController.m */,
 				B5CF85C91727242100BED8D6 /* second.png */,
+				B59C14F017385EB300E2860A /* Telemetrics.xcdatamodeld */,
+				B53FAD8D173EE7F200CE3C3D /* Journey.h */,
+				B53FAD8E173EE7F200CE3C3D /* Journey.m */,
 				B5CF85CB1727242100BED8D6 /* second@2x.png */,
 				B5CF85A81727242100BED8D6 /* Supporting Files */,
 			);
@@ -196,9 +199,6 @@
 				B5CF85B31727242100BED8D6 /* Default.png */,
 				B5CF85B51727242100BED8D6 /* Default@2x.png */,
 				B5CF85B71727242100BED8D6 /* Default-568h@2x.png */,
-				B59C14F017385EB300E2860A /* Telemetrics.xcdatamodeld */,
-				B59C14F31738600B00E2860A /* Journey.h */,
-				B59C14F41738600B00E2860A /* Journey.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -342,11 +342,11 @@
 				B5CF85B21727242100BED8D6 /* AppDelegate.m in Sources */,
 				B56D41A2172740DF00521BB2 /* FirstViewController.m in Sources */,
 				B5CF85C81727242100BED8D6 /* SecondViewController.m in Sources */,
-				B56D419D1727328700521BB2 /* PlacemarkViewController.m in Sources */,
+				B56D419D1727328700521BB2 /* JourneyViewController.m in Sources */,
 				B5ECF2AF17275B4D00BAF566 /* AccelerometerFilter.m in Sources */,
 				B5ECF2B017275B4D00BAF566 /* GraphView.m in Sources */,
 				B59C14F217385EB300E2860A /* Telemetrics.xcdatamodeld in Sources */,
-				B59C14F51738600B00E2860A /* Journey.m in Sources */,
+				B53FAD8F173EE7F200CE3C3D /* Journey.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

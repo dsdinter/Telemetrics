@@ -12,15 +12,17 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="POF-h7-NdM">
-                                <connections>
-                                    <outlet property="delegate" destination="2" id="uye-nf-VMK"/>
-                                </connections>
-                            </mapView>
+                            <mapView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="POF-h7-NdM"/>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cx7-Ed-znH">
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="OJb-R8-MdM"/>
-                                    <barButtonItem enabled="NO" title="Get Current Address" id="Lqf-bi-CIm">
+                                    <barButtonItem title="Start" id="gNw-o2-ptO">
+                                        <connections>
+                                            <action selector="StopOrStart:" destination="2" id="SFX-zn-i2D"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Od7-Y7-vdO"/>
+                                    <barButtonItem title="Get Current Journey" id="Lqf-bi-CIm">
                                         <connections>
                                             <segue destination="ytl-FE-Lzb" kind="push" identifier="pushToDetail" id="lYT-fM-3Ag"/>
                                         </connections>
@@ -41,8 +43,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Current Journey" id="OwR-QB-lvi" userLabel="Navigation Item - Current Journey"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="getAddressButton" destination="Lqf-bi-CIm" id="7A8-pB-NAG"/>
+                        <outlet property="Start" destination="gNw-o2-ptO" id="V0r-ux-HwW"/>
+                        <outlet property="getAddressButton" destination="Lqf-bi-CIm" id="NxL-dd-1J9"/>
                         <outlet property="mapView" destination="POF-h7-NdM" id="d2q-q1-n3i"/>
                     </connections>
                 </viewController>
@@ -50,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="1271" y="-127"/>
         </scene>
-        <!--Placemark View Controller - Address-->
+        <!--Journey View Controller - Address-->
         <scene sceneID="WXd-5S-p7c">
             <objects>
-                <tableViewController id="ytl-FE-Lzb" customClass="PlacemarkViewController" sceneMemberID="viewController">
+                <tableViewController id="ytl-FE-Lzb" customClass="JourneyViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="L4I-M3-9Kj">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -421,6 +425,8 @@
         <class className="FirstViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
             <relationships>
+                <relationship kind="action" name="StopOrStart:"/>
+                <relationship kind="outlet" name="Start" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="getAddressButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
             </relationships>
@@ -430,9 +436,6 @@
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="PlacemarkViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlacemarkViewController.h"/>
         </class>
         <class className="SecondViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondViewController.h"/>

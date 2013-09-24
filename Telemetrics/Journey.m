@@ -2,7 +2,7 @@
 //  Journey.m
 //  Telemetrics
 //
-//  Created by David Sabater on 06/05/2013.
+//  Created by David Sabater on 11/05/2013.
 //  Copyright (c) 2013 David Sabater. All rights reserved.
 //
 
@@ -11,10 +11,10 @@
 
 @implementation Journey
 
-@dynamic email;
-@dynamic speed;
-@dynamic longitude;
-@dynamic latitude;
 @dynamic date;
+@dynamic email;
+@dynamic latitude;
+@dynamic longitude;
+@dynamic speed;
 
 @end
